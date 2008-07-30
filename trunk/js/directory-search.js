@@ -12,13 +12,20 @@ var FEATURED_GADGETS_URL = RSS_BASE_URL + '&cat=featured&hl=en&gl=us';
  *   link, guid, title, description, thumbnail
  * ... and corresponds to the nodes with the same names in the RSS feed.
  */
-function getRadioGadgets(callback, callbackEach) {
+function getRadioGadgets(callback, eachCallback) {
   var rssUrl = buildSearchUrl("radio");
+  var doCallback = typeof(callback) == 'function';
+  var doEachCallback = typeof(eachCallback) == 'function';
+
+  if (!doCallback || !doEachCallback) {
+    return;
+  }
 
   _IG_FetchXmlContent(rssUrl, function(response) {
     if (response === null || typeof(response) != 'object' || 
         response.firstChild === null) {
-      return [];
+      if (doCallback)
+        callback([]);
     }
       
     var gadgets = [];
@@ -33,14 +40,15 @@ function getRadioGadgets(callback, callbackEach) {
         'description': getNodeValue(item, 'description')
       };
 
-      if (typeof(callbackEach) == 'function') {
-        callbackEach(gadget);
-      }
+      if (doEachCallback)
+        eachCallback(gadget);      
 
-      gadgets.push(gadget);
+      if (doCallback)
+        gadgets.push(gadget);
     }
 
-    callback(gadgets);
+    if (doCallback)
+      callback(gadgets);
   });
 }
 
