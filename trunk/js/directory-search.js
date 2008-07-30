@@ -15,7 +15,7 @@ var FEATURED_GADGETS_URL = RSS_BASE_URL + '&cat=featured&hl=en&gl=us';
 function getRadioGadgets() {
   var rssUrl = buildSearchUrl("radio");
 
-  _IG_XmlContent(rssUrl, function(response) {
+  _IG_FetchXmlContent(rssUrl, function(response) {
     if (response === null || typeof(response) != 'object' || 
         response.firstChild === null) {
       return [];
