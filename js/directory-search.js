@@ -25,17 +25,18 @@ function getRadioGadgets() {
     var items = response.getElementsByTagName('item');
 
     for (var i = 0; i < items.length; ++i) {
-      var item = {
+      var item = items.item(i);
+      var gadget = {
         'link': getNodeValue(item, 'link'),
         'guid': getNodeValue(item, 'guid'),
         'title': getNodeValue(item, 'title),
         'description': getNodeValue(item, 'description')
       }
 
-      items.push(item);
+      gadgets.push(gadget);
     }
 
-    return items;
+    return gadgets;
   }
 }
 
