@@ -16,8 +16,8 @@ function getRadioGadgets() {
   var rssUrl = buildSearchUrl("radio");
 
   _IG_XmlContent(rssUrl, function(response) {
-    if (response == null || typeof(response) != 'object' || 
-        response.firstChild == null) {
+    if (response === null || typeof(response) != 'object' || 
+        response.firstChild === null) {
       return [];
     }
       
@@ -37,7 +37,7 @@ function getRadioGadgets() {
     }
 
     return gadgets;
-  }
+  });
 }
 
 function buildSearchUrl(searchQuery) {
