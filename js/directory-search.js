@@ -13,9 +13,9 @@ var FEATURED_GADGETS_URL = RSS_BASE_URL + '&cat=featured&hl=en&gl=us';
  * ... and corresponds to the nodes with the same names in the RSS feed.
  */
 function getRadioGadgets() {
-  var rssUrl = buildSearchUrl("radio")
+  var rssUrl = buildSearchUrl("radio");
 
-  _IG_FetchXmlContent(rssUrl, function(response) {
+  _IG_XmlContent(rssUrl, function(response) {
     if (response == null || typeof(response) != 'object' || 
         response.firstChild == null) {
       return [];
@@ -29,9 +29,9 @@ function getRadioGadgets() {
       var gadget = {
         'link': getNodeValue(item, 'link'),
         'guid': getNodeValue(item, 'guid'),
-        'title': getNodeValue(item, 'title),
+        'title': getNodeValue(item, 'title'),
         'description': getNodeValue(item, 'description')
-      }
+      };
 
       gadgets.push(gadget);
     }
@@ -49,8 +49,8 @@ function buildSearchUrl(searchQuery) {
  */
 function getNodeValue(item, nodeName, opt_defaultValue) {
   try {
-    return item.getElementsByTagName(nodeName)[0].childNodes[0].nodeValue;
-  } catch(ex) {
+    return item.getElementsByTagName(nodeName).item(0).firstChild.nodeValue;
+  } catch (e) {
     return opt_defaultValue || '';
   }
 }
