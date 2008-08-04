@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="myRadio"
+               author="myRadio team"
+               height="500"
+               scrolling="true" />
+  <Content type="html">
+    <![CDATA[
+    <div id="debug-msg"></div>
+
+    <button onclick="update();">update</button>
+
+    <select id="gadgets"></select>
+
+    <iframe id="gadget" src=""></iframe>
+
+
+    <script type="text/javascript">
+      var wikipediaGadgetUrl = 'http://wpsearchbar.wikia.com/common/wpsearchbar.xml';
+      var ponderGadgetUrl = 'http://phillip132.googlepages.com/ponder.xml';
+
+      function update() {
+        var gadgetList = _gel('radio-gadget-list');
+        getRadioGadgets(console.log, appendGadget);
+      }
+
+      function appendGadget(gadgetItem) {
+        val elem = createOptionElement(gadgetItem);
+        _gel('radio-gadget-list').appendChild(elem);
+      }
+
+      function createOptionElement(gadgetItem) {
+        var element = document.createElement('option');
+
+        element.setAttribute('value', gadgetItem.guid);
+        element.appendChild(document.createTextNode(gadgetItem.title));
+
+        return element;
+      }
+    </script>
+    <script src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
+    <script src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
+    ]]>
+  </Content>
+</Module>
+
