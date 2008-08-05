@@ -33,12 +33,11 @@ function getRadioGadgets(callback, eachCallback) {
 
     for (var i = 0; i < items.length; ++i) {
       var item = items.item(i);
-      var gadget = {
-        'link': getNodeValue(item, 'link'),
-        'guid': getNodeValue(item, 'guid'),
-        'title': getNodeValue(item, 'title'),
-        'description': getNodeValue(item, 'description')
-      };
+      var gadget = { };
+
+      for (var node in ['link', 'guid', 'title', 'description', 'ghapi:type']) {
+        gadget[node] = getNodeValue(item, node);
+      }
 
       if (doEachCallback)
         eachCallback(gadget);      
@@ -65,5 +64,12 @@ function getNodeValue(item, nodeName, opt_defaultValue) {
   } catch (e) {
     return opt_defaultValue || '';
   }
+}
+
+/**
+ * Returns whether an item is a feed or not.
+ */
+function isFeed(item) {
+  return item['ghapi:type'] == 'feed';
 }
 
