@@ -22,9 +22,15 @@
         getRadioGadgets(console.log, appendGadget);
       }
 
+      function isFeed(item) {
+        return item['ghapi:type'] == 'feed';
+      }
+
       function appendGadget(gadgetItem) {
-        var elem = createOptionElement(gadgetItem);
-        radioList.appendChild(elem);
+        if (!isFeed(gadgetItem)) {
+          var elem = createOptionElement(gadgetItem);
+          radioList.appendChild(elem);
+        }
       }
 
       function createOptionElement(gadgetItem) {
