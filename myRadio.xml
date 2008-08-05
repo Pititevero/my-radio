@@ -2,31 +2,29 @@
 <Module>
   <ModulePrefs title="myRadio"
                author="myRadio team"
-               height="500"
+               height="800"
                scrolling="true" />
   <Content type="html">
-    <![CDATA[
+  <![CDATA[
     <div id="debug-msg"></div>
 
-    <button onclick="update();">update</button>
+    <button onclick="updateRadioList();">update</button>
 
-    <select id="gadgets"></select>
+    <select id="radio-list" onchange="changeStation(this);"></select>
 
     <iframe id="gadget" src=""></iframe>
 
 
     <script type="text/javascript">
-      var wikipediaGadgetUrl = 'http://wpsearchbar.wikia.com/common/wpsearchbar.xml';
-      var ponderGadgetUrl = 'http://phillip132.googlepages.com/ponder.xml';
+      var radioList = _gel('radio-list');
 
-      function update() {
-        var gadgetList = _gel('radio-gadget-list');
+      function updateRadioList() {
         getRadioGadgets(console.log, appendGadget);
       }
 
       function appendGadget(gadgetItem) {
-        val elem = createOptionElement(gadgetItem);
-        _gel('radio-gadget-list').appendChild(elem);
+        var elem = createOptionElement(gadgetItem);
+        radioList.appendChild(elem);
       }
 
       function createOptionElement(gadgetItem) {
@@ -36,6 +34,16 @@
         element.appendChild(document.createTextNode(gadgetItem.title));
 
         return element;
+      }
+
+      function showRadio(stationUrl) {
+        _gel('gadget').setAttribute('src', createEmbedGadgetUrl(stationUrl));
+      }
+
+      function changeStation(select) {
+        var item = select[select.selectedIndex];
+        var station = item.value;
+        showRadio(station);
       }
     </script>
     <script src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
