@@ -22,6 +22,7 @@ function getRadioGadgets(callback, eachCallback) {
   }
 
   _IG_FetchXmlContent(rssUrl, function(response) {
+    console.debug('response', response);
     if (response === null || typeof(response) != 'object' || 
         response.firstChild === null) {
       if (doCallback)
