@@ -18,12 +18,10 @@
     <script type="text/javascript">
       var radioList = _gel('radio-list');
 
-      function updateRadioList() {
-        getRadioGadgets(console.log, appendGadget);
-      }
+      function doNothing() { }
 
-      function isFeed(item) {
-        return item['ghapi:type'] == 'feed';
+      function updateRadioList() {
+        getRadioGadgets(doNothing, appendGadget);
       }
 
       function appendGadget(gadgetItem) {
