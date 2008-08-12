@@ -8,6 +8,8 @@
   </ModulePrefs>
   <Content type="html">
   <![CDATA[
+    <button onclick="updateRadioList(_gel('radio-list'));">Force</button>
+
     <label>
       __MSG_select_station__
       <select id="radio-list" onchange="changeStation(_gel('gadget'), this);"></select>
@@ -15,7 +17,6 @@
 
     <iframe id="gadget" src="" style="width: 100%;"></iframe>
 
-    
     <script type="text/javascript">
       var radioList = _gel('radio-list');
 
@@ -39,6 +40,7 @@ function getRadioGadgets(callback, eachCallback) {
   var doEachCallback = typeof(eachCallback) == 'function';
 
   if (!doCallback || !doEachCallback) {
+    console.log('no callbacks');
     return;
   }
 
@@ -80,8 +82,9 @@ function getRadioGadgets(callback, eachCallback) {
       }
     }
 
-    if (doCallback)
+    if (doCallback) {
       callback(gadgets);
+    }
   });
 }
 
@@ -121,6 +124,7 @@ function createEmbedGadgetUrl(gadgetXmlUrl) {
 
 
 function updateRadioList(radioList) {
+  console.log('updateRadioList');
   getRadioGadgets(null, function (gadgetItem) {
     if (!isFeed(gadgetItem)) {
       radioList.appendChild(createOptionElement(gadgetItem));
