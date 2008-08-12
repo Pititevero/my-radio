@@ -60,6 +60,7 @@ function getRadioGadgets(callback, eachCallback) {
     var items = response.getElementsByTagName('item');
 
     for (var i = 0; i < items.length; ++i) {
+      console.log('getting an item: ', i);
       var item = items.item(i);
       var gadget = {};
 
@@ -67,6 +68,7 @@ function getRadioGadgets(callback, eachCallback) {
       for (var n in nodes) {
         var node = nodes[n];
         gadget[node] = getNodeValue(item, node);
+        console.debug(gadget);
       }
 
       if (doEachCallback) {
