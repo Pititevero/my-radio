@@ -19,7 +19,8 @@
     <script type="text/javascript">
       var radioList = _gel('radio-list');
 
-      gadgets.util.registerOnLoadHandler(function() { updateRadioList(radioList); });
+      // gadgets.util.registerOnLoadHandler(function() { updateRadioList(radioList); });
+      _IG_RegisterOnloadHandler(updateRadioList(radioList));
     </script>
     ]]>
   </Content>
