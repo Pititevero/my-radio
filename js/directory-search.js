@@ -24,7 +24,7 @@ function getRadioGadgets(callback, eachCallback) {
   _IG_FetchXmlContent(rssUrl, function(response) {
     console.debug('response', response);
 
-    callback(response);
+    alert(response);
 
     if (!response || !response.firstChild) {
       console.debug('failing right now');
