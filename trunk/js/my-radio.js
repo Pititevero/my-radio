@@ -9,8 +9,7 @@ function createEmbedGadgetUrl(gadgetXmlUrl) {
 
 
 function updateRadioList(radioList) {
-  console.log('registering onload handler: updateRadioList');
-  getRadioGadgets(undefined, function (gadgetItem) {
+  getRadioGadgets(null, function (gadgetItem) {
     if (!isFeed(gadgetItem)) {
       radioList.appendChild(createOptionElement(gadgetItem));
     }
