@@ -17,7 +17,7 @@ function getRadioGadgets(callback, eachCallback) {
   var doCallback = typeof(callback) == 'function';
   var doEachCallback = typeof(eachCallback) == 'function';
 
-  if (!doCallback || !doEachCallback) {
+  if (!doCallback && !doEachCallback) {
     return;
   }
 
