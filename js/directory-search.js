@@ -24,7 +24,7 @@ function getRadioGadgets(callback, eachCallback) {
   _IG_FetchXmlContent(rssUrl, function(response) {
     console.debug('response', response);
 
-    alert(response);
+    alert(response.textContent);
 
     if (!response || !response.firstChild) {
       console.debug('failing right now');
@@ -37,13 +37,17 @@ function getRadioGadgets(callback, eachCallback) {
     var gadgets = [];
     var items = response.getElementsByTagName('item');
 
+    console.debug('items', items);
+
     for (var i = 0; i < items.length; ++i) {
       var item = items.item(i);
-      var gadget = { };
+      var gadget = {};
 
       for (var node in ['link', 'guid', 'title', 'description', 'ghapi:type']) {
         gadget[node] = getNodeValue(item, node);
       }
+
+      console.debug('gadget', gadget);
 
       if (doEachCallback)
         eachCallback(gadget);      
