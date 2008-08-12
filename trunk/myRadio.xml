@@ -17,38 +17,7 @@
     <script type="text/javascript">
       var radioList = _gel('radio-list');
 
-      function doNothing() { console.log('doing nothing'); }
-
-      function updateRadioList() {
-        getRadioGadgets(doNothing, appendGadget);
-      }
-
-      function appendGadget(gadgetItem) {
-        console.debug('got item', gadgetItem);
-        if (!isFeed(gadgetItem)) {
-          var elem = createOptionElement(gadgetItem);
-          radioList.appendChild(elem);
-        }
-      }
-
-      function createOptionElement(gadgetItem) {
-        var element = document.createElement('option');
-
-        element.setAttribute('value', gadgetItem.guid);
-        element.appendChild(document.createTextNode(gadgetItem.title));
-
-        return element;
-      }
-
-      function showRadio(stationUrl) {
-        _gel('gadget').setAttribute('src', createEmbedGadgetUrl(stationUrl));
-      }
-
-      function changeStation(select) {
-        var item = select[select.selectedIndex];
-        var station = item.value;
-        showRadio(station);
-      }
+      gadgets.util.registerOnLoadHandler(updateRadioList(radioList));
     </script>
     <script src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
     <script src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
