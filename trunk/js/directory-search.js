@@ -23,7 +23,9 @@ function getRadioGadgets(callback, eachCallback) {
     return;
   }
 
-  _IG_FetchXmlContent(rssUrl, function(response) {
+  var fetch = typeof(gadgets.io.makeRequestion) != 'undefined' ? goog.io.makeRequestion : _IG_FetchXmlContent;
+
+  fetch(rssUrl, function(response) {
     if (!response || typeof(response) != 'Object' || 
         !response.firstChild) {
       if (doCallback)
