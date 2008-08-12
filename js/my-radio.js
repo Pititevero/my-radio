@@ -24,6 +24,8 @@ function createOptionElement(gadgetItem) {
 }
 
 function updateStation(radioList, radio) {
-  radio.setAttribute('src', createEmbedGadgetUrl(radioList[radioList.selectedIndex].value));
+  var selectedItem = radioList[radioList.selectedIndex];
+  radio.setAttribute('src', createEmbedGadgetUrl(selectedItem.value));
+  console.debug(selectedItem);
 }
 
