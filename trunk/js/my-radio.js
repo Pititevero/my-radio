@@ -27,6 +27,3 @@ function updateStation(radioList, radio) {
   radio.setAttribute('src', createEmbedGadgetUrl(radioList[radioList.selectedIndex].value));
 }
 
-// BEWARE
-_IG_RegisterOnloadHandler(updateRadioList(_gel('radio-list')));
-
