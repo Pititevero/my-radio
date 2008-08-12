@@ -8,7 +8,7 @@
   <![CDATA[
     <label>
       Select station:
-      <select id="radio-list" onchange="changeStation(this);"></select>
+      <select id="radio-list" onchange="changeStation(_gel('gadget'), this);"></select>
     </label>
 
     <iframe id="gadget" src="" style="width: 100%;"></iframe>

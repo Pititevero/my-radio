@@ -61,6 +61,10 @@ function getRadioGadgets(callback, eachCallback) {
   });
 }
 
+
+/**
+ * Builds the URI to ask for a list of radio stations.
+ */
 function buildSearchUrl(searchQuery) {
   return RSS_BASE_URL + '&q=' + searchQuery;
 }
