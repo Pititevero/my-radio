@@ -63,7 +63,9 @@ function getRadioGadgets(callback, eachCallback) {
       var item = items.item(i);
       var gadget = {};
 
-      for (var n = 0, node; node = nodes[i]; ++n) {
+      // for (var n = 0, node; node = nodes[i]; ++n) {
+      for (var n in nodes) {
+        var node = nodes[n];
         gadget[node] = getNodeValue(item, node);
       }
 
@@ -135,10 +137,10 @@ function updateStation(radioList, radio) {
   radio.setAttribute('src', createEmbedGadgetUrl(radioList[radioList.selectedIndex].value));
 }
 
-// BEWARE
-_IG_RegisterOnloadHandler(updateRadioList(_gel('radio-list')));
-
-      // gadgets.util.registerOnLoadHandler(function() { updateRadioList(radioList); });
+_IG_RegisterOnloadHandler(function() {
+  console.log('registered onload handler');
+  updateRadioList(_gel('radio-list'));
+});
     </script>
     ]]>
   </Content>
