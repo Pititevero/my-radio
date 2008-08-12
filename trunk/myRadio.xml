@@ -8,6 +8,7 @@
   </ModulePrefs>
   <Content type="html">
   <![CDATA[
+    <button onclick="updateRadioList(_gel('radio_list'));">Forza!</button>
     <label>
       __MSG_select_station__
       <select id="radio-list" onchange="changeStation(_gel('gadget'), this);"></select>
