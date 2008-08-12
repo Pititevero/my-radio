@@ -9,19 +9,18 @@ function createEmbedGadgetUrl(gadgetXmlUrl) {
 
 
 function updateRadioList(radioList) {
+  console.log('registering onload handler: updateRadioList');
   getRadioGadgets(undefined, function (gadgetItem) {
     if (!isFeed(gadgetItem)) {
       radioList.appendChild(createOptionElement(gadgetItem));
     }
-  }
+  });
 }
 
 function createOptionElement(gadgetItem) {
   var element = document.createElement('option');
-
   element.setAttribute('value', gadgetItem.guid);
   element.appendChild(document.createTextNode(gadgetItem.title));
-
   return element;
 }
 
