@@ -29,7 +29,9 @@ function getRadioGadgets(callback, eachCallback) {
       if (doCallback)
         callback([]);
     }
-      
+
+    console.log(response.nodeName);      
+
     var gadgets = [];
     var items = response.getElementsByTagName('item');
 
