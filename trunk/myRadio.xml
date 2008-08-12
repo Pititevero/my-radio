@@ -13,14 +13,14 @@
 
     <iframe id="gadget" src="" style="width: 100%;"></iframe>
 
+    <script src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
+    <script src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
 
     <script type="text/javascript">
       var radioList = _gel('radio-list');
 
       gadgets.util.registerOnLoadHandler(updateRadioList(radioList));
     </script>
-    <script src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
-    <script src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
     ]]>
   </Content>
 </Module>
