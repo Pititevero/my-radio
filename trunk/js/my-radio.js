@@ -24,11 +24,7 @@ function createOptionElement(gadgetItem) {
   return element;
 }
 
-function showRadio(stationUrl) {
-  _gel('gadget').setAttribute('src', createEmbedGadgetUrl(stationUrl));
-}
-
-function setStation(select) {
-  showRadio(select[select.selectedIndex].value);
+function updateStation(radioList, radio) {
+  radio.setAttribute('src', createEmbedGadgetUrl(radioList[radioList.selectedIndex].value));
 }
 
