@@ -7,6 +7,8 @@ var RSS_BASE_URL = 'http://www.google.com/ig/directory?sort=popular&output=rss';
 
 var FEATURED_GADGETS_URL = RSS_BASE_URL + '&cat=featured&hl=en&gl=us';
 
+var RSS_ITEM_ELEMENTS = ['link', 'guid', 'title', 'description', 'type'];
+
 /**
  * Returns an array of objects representing gadgets. Keys in the objects are:
  *   link, guid, title, description, thumbnail
@@ -22,12 +24,8 @@ function getRadioGadgets(callback, eachCallback) {
   }
 
   _IG_FetchXmlContent(rssUrl, function(response) {
-    console.debug('response', response);
-
-    alert(response.textContent);
-
-    if (!response || !response.firstChild) {
-      console.debug('failing right now');
+    if (!response || typeof(response) != 'Object' || 
+        !response.firstChild) {
       if (doCallback)
         callback([]);
     }
@@ -38,10 +36,11 @@ function getRadioGadgets(callback, eachCallback) {
     for (var i = 0; i < items.length; ++i) {
       var item = items.item(i);
       var gadget = {};
+      var node;
 
-      for (var node in ['link', 'guid', 'title', 'description', 'type']) {
+      for (var e in RSS_ITEM_ELEMENTS) {
+        node = RSS_ITEM_ELEMENTS[e];
         gadget[node] = getNodeValue(item, node);
-        console.log('gadget.' + node + ' = ' + gadget[node]);
       }
 
       if (doEachCallback)
