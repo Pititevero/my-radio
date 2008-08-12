@@ -43,7 +43,7 @@ function getRadioGadgets(callback, eachCallback) {
       var item = items.item(i);
       var gadget = {};
 
-      for (var node in ['link', 'guid', 'title', 'description', 'ghapi:type']) {
+      for (var node in ['link', 'guid', 'title', 'description', 'type']) {
         gadget[node] = getNodeValue(item, node);
       }
 
