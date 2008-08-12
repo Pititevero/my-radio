@@ -18,8 +18,8 @@
 
     <iframe id="gadget" src="" style="width: 100%;"></iframe>
 
-    <script type="text/javascript" src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js" />
-    <script type="text/javascript" src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js" />
+    <script type="text/javascript" src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
+    <script type="text/javascript" src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
     <script type="text/javascript">
       _IG_RegisterOnloadHandler(function() {
         console.log('registered onload handler');
