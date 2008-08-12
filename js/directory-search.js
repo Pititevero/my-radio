@@ -32,12 +32,8 @@ function getRadioGadgets(callback, eachCallback) {
         callback([]);
     }
 
-    console.log(response.nodeName);      
-
     var gadgets = [];
     var items = response.getElementsByTagName('item');
-
-    console.debug('items', items);
 
     for (var i = 0; i < items.length; ++i) {
       var item = items.item(i);
@@ -45,9 +41,8 @@ function getRadioGadgets(callback, eachCallback) {
 
       for (var node in ['link', 'guid', 'title', 'description', 'type']) {
         gadget[node] = getNodeValue(item, node);
+        console.log('gadget.' + node + ' = ' + gadget[node]);
       }
-
-      console.debug('gadget', gadget);
 
       if (doEachCallback)
         eachCallback(gadget);      
