@@ -6,13 +6,12 @@
                scrolling="true" />
   <Content type="html">
   <![CDATA[
-    <div id="debug-msg"></div>
+    <label>
+      Select station:
+      <select id="radio-list" onchange="changeStation(this);"></select>
+    </label>
 
-    <button onclick="updateRadioList();">update</button>
-
-    <select id="radio-list" onchange="changeStation(this);"></select>
-
-    <iframe id="gadget" src=""></iframe>
+    <iframe id="gadget" src="" style="width: 100%;"></iframe>
 
 
     <script type="text/javascript">
