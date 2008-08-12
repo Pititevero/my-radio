@@ -7,7 +7,7 @@ var RSS_BASE_URL = 'http://www.google.com/ig/directory?sort=popular&output=rss';
 
 var FEATURED_GADGETS_URL = RSS_BASE_URL + '&cat=featured&hl=en&gl=us';
 
-var RSS_ITEM_ELEMENTS = ['link', 'guid', 'title', 'description', 'type'];
+var RSS_ITEM_ELEMENTS = ['link', 'guid', 'title', 'description', 'ghapi:type'];
 
 /**
  * Returns an array of objects representing gadgets. Keys in the objects are:
