@@ -3,19 +3,22 @@
   <ModulePrefs title="myRadio"
                author="myRadio team"
                height="800"
-               scrolling="true" />
+               scrolling="true">
+    <Locale messages="http://my-radio.googlecode.com/svn/trunk/lang/ALL_ALL.xml" />
+  </ModulePrefs>
   <Content type="html">
   <![CDATA[
+    <script src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
+    <script src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
+
     <label>
-      Select station:
+      __MSG_select_station__
       <select id="radio-list" onchange="changeStation(_gel('gadget'), this);"></select>
     </label>
 
     <iframe id="gadget" src="" style="width: 100%;"></iframe>
 
-    <script src="http://my-radio.googlecode.com/svn/trunk/js/directory-search.js"></script>
-    <script src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
-
+    
     <script type="text/javascript">
       var radioList = _gel('radio-list');
 
