@@ -33,6 +33,7 @@ var FEATURED_GADGETS_URL = RSS_BASE_URL + '&cat=featured&hl=en&gl=us';
  * ... and corresponds to the nodes with the same names in the RSS feed.
  */
 function getRadioGadgets(callback, eachCallback) {
+  console.log('fetching gadgets');
   var rssUrl = buildSearchUrl("radio");
   var doCallback = typeof(callback) == 'function';
   var doEachCallback = typeof(eachCallback) == 'function';
@@ -42,8 +43,7 @@ function getRadioGadgets(callback, eachCallback) {
   }
 
   _IG_FetchXmlContent(rssUrl, function(response) {
-    if (!response || typeof(response) != 'Object' || 
-        !response.firstChild) {
+    if (!response || !response.firstChild) {
       if (doCallback) {
         callback([]);
       }
