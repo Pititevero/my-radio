@@ -24,20 +24,20 @@ scrolling="false">
 <EnumValue value="evropa2cz" display_value="Evropa 2 (CZ)"/>
 <EnumValue value="frekvence1cz" display_value="Frekvence 1 (CZ)"/>
 <EnumValue value="kiss98fmcz" display_value="Kiss 98fm (CZ)"/>
-<EnumValue value="radiocitycz" display_value="Radio City(CZ"/>
+<EnumValue value="radiocitycz" display_value="Radio City (CZ)"/>
 <EnumValue value="radiodjcz" display_value="Radio DJ (CZ)"/>
 <EnumValue value="europe1fr" display_value="Europe 1 (FR)"/>
 <EnumValue value="nrjfr" display_value="NRJ (FR)"/>
 <EnumValue value="rtl2fr" display_value="RTL2 (FR)"/>
-<EnumValue value="skyrockfr" display_value="Skyrock(FR)"/>
+<EnumValue value="skyrockfr" display_value="Skyrock (FR)"/>
 <EnumValue value="virginradiofr" display_value="Virgin Radio (FR)"/>
-<EnumValue value="bayern1de" display_value="Bayern 1(DE)"/>
-<EnumValue value="bayern3de" display_value="Bayern 3(DE)"/>
-<EnumValue value="einslivede" display_value="Einslive(DE)"/>
-<EnumValue value="energyde" display_value="Energy(DE)"/>
-<EnumValue value="radioseekunkde" display_value="Radio Seefunk(DE)"/>
-<EnumValue value="cadena100es" display_value="Cadena 100(ES)"/>
-<EnumValue value="radiomarcaes" display_value="Radio Marca(ES)"/>
+<EnumValue value="bayern1de" display_value="Bayern 1 (DE)"/>
+<EnumValue value="bayern3de" display_value="Bayern 3 (DE)"/>
+<EnumValue value="einslivede" display_value="Einslive (DE)"/>
+<EnumValue value="energyde" display_value="Energy (DE)"/>
+<EnumValue value="radioseekunkde" display_value="Radio Seefunk (DE)"/>
+<EnumValue value="cadena100es" display_value="Cadena 100 (ES)"/>
+<EnumValue value="radiomarcaes" display_value="Radio Marca (ES)"/>
 </UserPref>
 <UserPref name="autoplay" display_name="__MSG_autoplay_on_page_load__" datatype="bool" default_value="false"/>
 <UserPref name="favorite" datatype="hidden" default_value="none"/>
