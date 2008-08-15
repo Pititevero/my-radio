@@ -5,6 +5,7 @@ author="myRadio team"
 height="100"
 width="400"
 scrolling="false">
+<Locale messages="http://my-radio.googlecode.com/svn/trunk/lang/ALL_ALL.xml" />
 <Require feature="settitle" />
 <Require feature='setprefs'/>
 </ModulePrefs>
