@@ -67,7 +67,6 @@ play(radio);
 }
 
 function play(radio){
-alert(radio);
 prefs.set("currentRadio", radio);
 if (openWindow) {
 window.open(getRadioURL(radio));
