@@ -67,10 +67,11 @@ var openWindow = prefs.getBool('newWindow');
 var playAtLaunch = prefs.getBool('autoplay');
 var radioAtLaunch = prefs.getString('startWith');
 var selectedCountry = prefs.getString('selectedCountry');
-var radioNames = new Array('evropa2cz', 'frekvence1cz', 'kiss98fmcz', 'radiocitycz', 'radiodjcz',
-'europe1fr', 'nrjfr', 'rtl2fr', 'skyrockfr', 'virginradiofr',
-'bayern1de', 'bayern2de','einslivede', 'energyde', 'radioseefunkde',
-'cadena100es', 'radiomarcaes');
+var radioCZ = new Array('evropa2cz', 'frekvence1cz', 'kiss98fmcz', 'radiocitycz', 'radiodjcz');
+var radioFR = new Array('europe1fr', 'nrjfr', 'rtl2fr', 'skyrockfr', 'virginradiofr');
+var radioDE = new Array('bayern1de', 'bayern2de','einslivede', 'energyde', 'radioseefunkde');
+var radioES = new Array('cadena100es', 'radiomarcaes');
+var radioNames = new Array(radioCZ, radioFR, radioDE, radioES);
 var selectedRadio = "";
 
 function startRadio(radio) {
@@ -232,8 +233,26 @@ function getRadioToStartWith() {
 if(radioAtLaunch == 'lastStation') {
 selectedRadio = prefs.getString('currentRadio');
 } else if(radioAtLaunch == 'randomStation') {
-var random = Math.floor((Math.random() * radioNames.length));
-selectedRadio = radioNames[random];
+var x;
+switch(selectedCountry) {
+case 'all':
+x = Math.floor((Math.random() * radioNames.length));
+break;
+case 'czech':
+x = 0;
+break;
+case 'france':
+x = 1;
+break;
+case 'germany':
+x = 2;
+break;
+case 'spain':
+x = 3;
+break;
+}
+var random = Math.floor((Math.random() * radioNames[x].length));
+selectedRadio = radioNames[x][random];
 } else {
 selectedRadio = radioAtLaunch;
 }
@@ -274,3 +293,4 @@ _IG_RegisterOnloadHandler(start);
 ]]>
 </Content>
 </Module>
+
