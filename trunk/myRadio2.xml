@@ -9,7 +9,7 @@ scrolling="false">
 <Require feature="settitle" />
 <Require feature='setprefs'/>
 </ModulePrefs>
-<UserPref name="language" display_name="Language" datatype="enum" default_value="English">
+<UserPref name="language" display_name="Language" datatype="enum" default_value="english">
 <EnumValue value="german" display_value="Deutsch"/>
 <EnumValue value="english" display_value="English"/>
 <EnumValue value="spanish" display_value="Español"/>
@@ -32,7 +32,7 @@ scrolling="false">
 <EnumValue value="virginradiofr" display_value="Virgin Radio (FR)"/>
 <EnumValue value="einslivede" display_value="Einslive (DE)"/>
 </UserPref>
-<UserPref name="autoplay" display_name="Autoplay on page load" datatype="bool" default_value="true"/>
+<UserPref name="autoplay" display_name="Autoplay on page load" datatype="bool" default_value="false"/>
 <UserPref name="favorite" datatype="hidden" default_value="none"/>
 <UserPref name="skin" display_name="Background" datatype="enum" default_value="http://my-radio.googlecode.com/svn/trunk/skins/bluecircle.png">
 <EnumValue value="http://my-radio.googlecode.com/svn/trunk/skins/bluecircle.png" display_value="Blue disco"/>
@@ -58,6 +58,7 @@ var playAtLaunch = prefs.getBool('autoplay');
 var radioAtLaunch = prefs.getString('startWith');
 var selectedCountry = prefs.getString('selectedCountry');
 var radioNames = new Array('nrjfr', 'virginradiofr', 'einslivede');
+var selectedRadio = "";
 
 function startRadio(radio) {
 if (playAtLaunch) {
@@ -66,6 +67,7 @@ play(radio);
 }
 
 function play(radio){
+alert(radio);
 prefs.set("currentRadio", radio);
 if (openWindow) {
 window.open(getRadioURL(radio));
@@ -115,12 +117,14 @@ return radioList;
 
 function getRadioToStartWith() {
 if(radioAtLaunch == 'lastStation') {
-return prefs.getString('currentRadio');
+selectedRadio = prefs.getString('currentRadio');
 } else if(radioAtLaunch == 'randomStation') {
 var random = Math.floor((Math.random() * radioNames.length));
-return radioNames[random];
+selectedRadio = radioNames[random];
+} else {
+selectedRadio = radioAtLaunch;
 }
-return radioAtLaunch;
+return selectedRadio;
 }
 
 
@@ -139,10 +143,10 @@ var div=_gel("container");
 var radioToStartWith = getRadioToStartWith();
 var dropdownList = getRadioList(radioToStartWith);
 var chaine= "<label>__MSG_select_station__</label>"
-+ "<div><form><select name=\"radiolist\" onchange=\"play(radioToPlay = radiolist.options[radiolist.selectedIndex].value);\">"
++ "<div><form><select name=\"radiolist\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
 + dropdownList
 + "</select></form></div>" +
-"<button onclick=\"play();\">Play</button>"+
+"<button onclick=\"play(selectedRadio);\">Play</button>"+
 "<button onclick=\"stop();\">Stop</button>"+
 
 "<iframe src=\"\" name=\"displayRadio\" id=\"displayRadio\" height=\"0\" width=\"0\"></iframe>"+
@@ -158,6 +162,7 @@ _IG_RegisterOnloadHandler(start);
 ]]>
 </Content>
 </Module>
+
 
 
 
