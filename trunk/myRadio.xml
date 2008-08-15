@@ -22,7 +22,6 @@
     <script type="text/javascript" src="http://my-radio.googlecode.com/svn/trunk/js/my-radio.js"></script>
     <script type="text/javascript">
       _IG_RegisterOnloadHandler(function() {
-        console.log('registered onload handler');
         updateRadioList(_gel('radio-list'));
       });
     </script>
