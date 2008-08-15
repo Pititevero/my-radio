@@ -13,7 +13,6 @@ scrolling="false">
 <UserPref name="selectedCountry" display_name="__MSG_selected_country__" datatype="enum" default_value="all">
 <EnumValue value="all" display_value="__MSG_all__"/>
 <EnumValue value="germany" display_value="__MSG_germany__"/>
-<EnumValue value="uk" display_value="__MSG_uk__"/>
 <EnumValue value="spain" display_value="__MSG_spain__"/>
 <EnumValue value="france" display_value="__MSG_france__"/>
 <EnumValue value="czech" display_value="__MSG_czech__"/>
