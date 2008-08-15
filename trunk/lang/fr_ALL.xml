@@ -1,9 +1,8 @@
 <!-- Message bundle for fr_ALL -->
 
 <messagebundle>
-  <msg name="select_station">Sélectionner une station</msg>
-  <msg name="selected_country">Pays des stations</msg>
-  <msg name="all">Tous</msg>
+  <msg name="selected_country">Stations de</msg>
+  <msg name="all">tous les pays</msg>
   <msg name="germany">Allemagne</msg>
   <msg name="uk">Grande-Bretagne</msg>
   <msg name="spain">Espagne</msg>
@@ -14,5 +13,6 @@
   <msg name="last_station">la dernière station jouée</msg>
   <msg name="random_station">une station aléatoire</msg>
   <msg name="autoplay_on_page_load">Jouer automatiquement au chargement de la page</msg>
+  <msg name="select_station">Sélectionner une station</msg>
 </messagebundle>
 
