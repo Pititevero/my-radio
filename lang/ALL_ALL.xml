@@ -1,9 +1,8 @@
 <!-- Message bundle for ALL_ALL and US english -->
 
 <messagebundle>
-  <msg name="select_station">Select a station</msg>
-  <msg name="select_country">Radio Station country</msg>
-  <msg name="all">All</msg>
+  <msg name="select_country">Radiostations from</msg>
+  <msg name="all">all countries</msg>
   <msg name="germany">Germany</msg>
   <msg name="uk">United-Kingdom</msg>
   <msg name="spain">Spain</msg>
@@ -14,5 +13,6 @@
   <msg name="last_station">last station played</msg>
   <msg name="random_station">random station</msg>
   <msg name="autoplay_on_page_load">Autoplay on page load</msg>
+  <msg name="select_station">Select a station</msg>
 </messagebundle>
 
