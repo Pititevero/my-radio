@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="myRadio"
+author="myRadio team"
+height="100"
+width="400"
+scrolling="false">
+<Locale messages="http://my-radio.googlecode.com/svn/trunk/lang/ALL_ALL.xml" />
+<Locale lang="fr" messages="http://my-radio.googlecode.com/svn/trunk/lang/fr_ALL.xml"/>
+<Require feature="settitle" />
+<Require feature='setprefs'/>
+</ModulePrefs>
+<UserPref name="selectedCountry" display_name="__MSG_selected_country__" datatype="enum" default_value="all">
+<EnumValue value="all" display_value="__MSG_all__"/>
+<EnumValue value="germany" display_value="__MSG_germany__"/>
+<EnumValue value="uk" display_value="__MSG_uk__"/>
+<EnumValue value="spain" display_value="__MSG_spain__"/>
+<EnumValue value="france" display_value="__MSG_france__"/>
+<EnumValue value="sweden" display_value="__MSG_sweden__"/>
+</UserPref>
+<UserPref name="newWindow" display_name="__MSG_open_radio_in_a_new_window__" datatype="bool" default_value="false"/>
+<UserPref name="startWith" display_name="__MSG_always_start_with__" datatype="enum" default_value="lastStation">
+<EnumValue value="lastStation" display_value="__MSG_last_station__"/>
+<EnumValue value="randomStation" display_value="__MSG_random_station__"/>
+<EnumValue value="nrjfr" display_value="NRJ (FR)"/>
+<EnumValue value="virginradiofr" display_value="Virgin Radio (FR)"/>
+<EnumValue value="einslivede" display_value="Einslive (DE)"/>
+</UserPref>
+<UserPref name="autoplay" display_name="__MSG_autoplay_on_page_load__" datatype="bool" default_value="false"/>
+<UserPref name="favorite" datatype="hidden" default_value="none"/>
+<UserPref name="skin" display_name="__MSG_background__" datatype="enum" default_value="http://my-radio.googlecode.com/svn/trunk/skins/bluecircle.png">
+<EnumValue value="http://my-radio.googlecode.com/svn/trunk/skins/bluecircle.png" display_value="Blue disco"/>
+<EnumValue value="http://my-radio.googlecode.com/svn/trunk/skins/pinkcircle.png" display_value="Pink disco"/>
+</UserPref>
+<UserPref name="currentRadio" default_value="nrjfr" dataType="hidden">
+</UserPref>
+
+<Content type="html">
+<![CDATA[
+<style>
+#container {
+background-image: url(__UP_skin__);
+text-align: center;
+padding: 10px;
+}
+</style>
+
+<script type="text/javascript">
+var prefs = new _IG_Prefs(__MODULE_ID__);
+var openWindow = prefs.getBool('newWindow');
+var playAtLaunch = prefs.getBool('autoplay');
+var radioAtLaunch = prefs.getString('startWith');
+var selectedCountry = prefs.getString('selectedCountry');
+var radioNames = new Array('nrjfr', 'virginradiofr', 'einslivede');
+var selectedRadio = "";
+
+function startRadio(radio) {
+if (playAtLaunch) {
+play(radio);
+}
+}
+
+function play(radio){
+prefs.set("currentRadio", radio);
+if (openWindow) {
+window.open(getRadioURL(radio));
+} else {
+var cadre = window.frames["displayRadio"];
+cadre.location=getRadioURL(radio);
+}
+}
+
+function getRadioURL(radio) {
+var theURL = null;
+if(radio == 'nrjfr') {
+theURL="http://player.nrj.fr/V4/nrj/webradios/player_V1.html?webradio=nrj&version=maxi";
+}
+else if (radio == 'virginradiofr') {
+theURL="http://player.virginradio.fr/V4/virgin/player_V1.html?webradio=virgin#";
+}
+else if (radio == 'einslivede') {
+theURL ="http://mdr.streamfarm.net/cms/_vm100/radios/mdr/live/jump_cms.asx";
+}
+return theURL;
+}
+
+function getRadioList(radio) {
+
+var radioList = "";
+if(selectedCountry == 'france') {
+var radioList = "<optgroup label=\"France\"> <option value=\"nrjfr\" >NRJ</option>"
++ "<option value=\"virginradiofr\" >Virgin Radio</option></optgroup>";
+}
+else if(selectedCountry == 'germany') {
+var radioList = "<optgroup label=\"Germany\"> <option value=\"einslivede\" >Einslive</option>"
++ "</optgroup>";
+}
+else if (selectedCountry == 'all') {
+var radioList = "<optgroup label=\"France\"> <option value=\"nrjfr\" >NRJ</option>"
++ "<option value=\"virginradiofr\" >Virgin Radio</option></optgroup>"
++ "<optgroup label=\"Germany\"> <option value=\"einslivede\" >Einslive</option>"
++ "</optgroup>";
+}
+radioList1 = radioList.substring(0, radioList.indexOf(radio) - 7);
+radioList2 = "selected " + radioList.substring(radioList.indexOf(radio) - 7, radioList.length);
+radioList = radioList1 + radioList2;
+
+return radioList;
+}
+
+function getRadioToStartWith() {
+if(radioAtLaunch == 'lastStation') {
+selectedRadio = prefs.getString('currentRadio');
+} else if(radioAtLaunch == 'randomStation') {
+var random = Math.floor((Math.random() * radioNames.length));
+selectedRadio = radioNames[random];
+} else {
+selectedRadio = radioAtLaunch;
+}
+return selectedRadio;
+}
+
+
+function stop(){
+var cadre = window.frames["displayRadio"];
+cadre.location=null;
+}
+
+
+</script>
+<div id=container></div>
+<script type="text/javascript">
+
+function start(){
+var div=_gel("container");
+var radioToStartWith = getRadioToStartWith();
+var dropdownList = getRadioList(radioToStartWith);
+var chaine= "<label>__MSG_select_station__</label>"
++ "<div><form><select name=\"radiolist\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
++ dropdownList
++ "</select></form></div>" +
+"<button onclick=\"play(selectedRadio);\">Play</button>"+
+"<button onclick=\"stop();\">Stop</button>"+
+
+"<iframe src=\"\" name=\"displayRadio\" id=\"displayRadio\" height=\"0\" width=\"0\"></iframe>"+
+
+"</div>"
+div.innerHTML=chaine;
+
+startRadio(radioToStartWith);
+}
+
+_IG_RegisterOnloadHandler(start);
+</script>
+]]>
+</Content>
+</Module>
+
+
+
+
+
+
+
+
+
+
+
+
+
