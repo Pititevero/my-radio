@@ -2,13 +2,17 @@
 
 <messagebundle>
   <msg name="select_station">Select a station</msg>
-  <msg name="selected_country">Radio Station country</msg>
+  <msg name="select_country">Radio Station country</msg>
   <msg name="all">All</msg>
   <msg name="germany">Germany</msg>
   <msg name="uk">United-Kingdom</msg>
   <msg name="spain">Spain</msg>
   <msg name="france">France</msg>
   <msg name="sweden">Sweden</msg>
-  <msg name="Open_radio_in_a_new_window">Open radio in a new window</msg>
+  <msg name="open_radio_in_a_new_window">Open </msg>
+  <msg name="always_start_with">Always start with</msg>
+  <msg name="last_station">last station played</msg>
+  <msg name="random_station">random station</msg>
+  <msg name="autoplay_on_page_load">Autoplay on page load</msg>
 </messagebundle>
 

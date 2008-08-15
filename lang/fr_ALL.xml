@@ -9,6 +9,10 @@
   <msg name="spain">Espagne</msg>
   <msg name="france">France</msg>
   <msg name="sweden">Suède</msg>
-  <msg name="Open_radio_in_a_new_window">Ouvrir dans une autre fenêtre</msg>
+  <msg name="open_radio_in_a_new_window">Ouvrir dans une autre fenêtre</msg>
+  <msg name="always_start_with">Toujours commencer avec</msg>
+  <msg name="last_station">la dernière station jouée</msg>
+  <msg name="random_station">une station aléatoire</msg>
+  <msg name="autoplay_on_page_load">Jouer automatiquement au chargement de la page</msg>
 </messagebundle>
 
