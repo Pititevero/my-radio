@@ -88,17 +88,17 @@ function getRadioList(radio) {
 
 var radioList = "";
 if(selectedCountry == 'france') {
-var radioList = "<optgroup label=\"France\"> <option value=\"nrjfr\" >NRJ</option>"
+var radioList = "<optgroup label=\"__MSG_france__\"> <option value=\"nrjfr\" >NRJ</option>"
 + "<option value=\"virginradiofr\" >Virgin Radio</option></optgroup>";
 }
 else if(selectedCountry == 'germany') {
-var radioList = "<optgroup label=\"Germany\"> <option value=\"einslivede\" >Einslive</option>"
+var radioList = "<optgroup label=\"__MSG_germany__\"> <option value=\"einslivede\" >Einslive</option>"
 + "</optgroup>";
 }
 else if (selectedCountry == 'all') {
-var radioList = "<optgroup label=\"France\"> <option value=\"nrjfr\" >NRJ</option>"
+var radioList = "<optgroup label=\"__MSG_france__\"> <option value=\"nrjfr\" >NRJ</option>"
 + "<option value=\"virginradiofr\" >Virgin Radio</option></optgroup>"
-+ "<optgroup label=\"Germany\"> <option value=\"einslivede\" >Einslive</option>"
++ "<optgroup label=\"__MSG_germany__\"> <option value=\"einslivede\" >Einslive</option>"
 + "</optgroup>";
 }
 radioList1 = radioList.substring(0, radioList.indexOf(radio) - 7);
@@ -154,6 +154,7 @@ _IG_RegisterOnloadHandler(start);
 ]]>
 </Content>
 </Module>
+
 
 
 
