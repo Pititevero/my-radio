@@ -1,7 +1,7 @@
 <!-- Message bundle for ALL_ALL and US english -->
 
 <messagebundle>
-  <msg name="select_country">Radiostations from</msg>
+  <msg name="selected_country">Radiostations from</msg>
   <msg name="all">all countries</msg>
   <msg name="germany">Germany</msg>
   <msg name="spain">Spain</msg>
