@@ -138,13 +138,12 @@ var dropdownList = getRadioList(radioToStartWith);
 var chaine= "<label>__MSG_select_station__</label>"
 + "<div><form><select name=\"radiolist\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
 + dropdownList
-+ "</select></form></div>" +
-"<button onclick=\"play(selectedRadio);\">Play</button>"+
-"<button onclick=\"stop();\">Stop</button>"+
-
-"<iframe src=\"\" name=\"displayRadio\" id=\"displayRadio\" height=\"0\" width=\"0\"></iframe>"+
-
-"</div>"
++ "</select></form></div>"
++ "<button onclick=\"play(selectedRadio);\">Play</button>"
++ "<button onclick=\"stop();\">Stop</button>"
++ "<div style=\"visibility: hidden;\">"
++ "<iframe src=\"\" name=\"displayRadio\" id=\"displayRadio\" height=\"0\" width=\"0\"></iframe>"
++ "</div>"
 div.innerHTML=chaine;
 
 startRadio(radioToStartWith);
