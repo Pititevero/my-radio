@@ -2,7 +2,7 @@
 
 <messagebundle>
   <msg name="select_station">Select a station</msg>
-  <msg name="select_country">Radio Station country</msg>
+  <msg name="selected_country">Radio Station country</msg>
   <msg name="all">All</msg>
   <msg name="germany">Germany</msg>
   <msg name="uk">United-Kingdom</msg>
