@@ -2,5 +2,13 @@
 
 <messagebundle>
   <msg name="select_station">Sélectionner une station</msg>
+  <msg name="select_country">Pays des stations</msg>
+  <msg name="all">Tous</msg>
+  <msg name="germany">Allemagne</msg>
+  <msg name="uk">Grande-Bretagne</msg>
+  <msg name="spain">Espagne</msg>
+  <msg name="france">France</msg>
+  <msg name="sweden">Suède</msg>
+  <msg name="Open_radio_in_a_new_window">Ouvrir dans une autre fenêtre</msg>
 </messagebundle>
 
