@@ -13,6 +13,7 @@
   <msg name="last_station">last station played</msg>
   <msg name="random_station">random station</msg>
   <msg name="autoplay_on_page_load">Autoplay on page load</msg>
+  <msg name="background">Background</msg>
   <msg name="select_station">Select a station</msg>
 </messagebundle>
 
