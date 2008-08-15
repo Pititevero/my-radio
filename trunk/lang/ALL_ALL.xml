@@ -1,6 +1,6 @@
 <!-- Message bundle for ALL_ALL and US english -->
 
 <messagebundle>
-  <msg name="select_station">Select station</msg>
+  <msg name="select_station">Select a station</msg>
 </messagebundle>
 
