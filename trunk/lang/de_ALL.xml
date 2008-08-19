@@ -14,6 +14,7 @@
   <msg name="autoplay_on_page_load">Automatische Wiedergabe auf dieser Seite</msg>
   <msg name="background">Hintergrund</msg>
   <msg name="select_station">Wähle einen Radiosender</msg>
+  <msg name="share_with_your_friends">Lasse deine Freunde hiervon wissen!</msg>
 </messagebundle>
 </messagebundle>
 
