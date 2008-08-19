@@ -146,7 +146,7 @@ case 'rtl2fr':
 playerURL = "http://radio.rtl2.fr";
 break;
 case 'einslivede':
-playerURL = "http://mdr.streamfarm.net/cms/_vm100/radios/mdr/live/jump_cms.asx";
+playerURL = "http://www.einslive.de/multimedia/livestream_popup/player_stream_wmp.html";
 break;
 case 'bayern1de':
 playerURL = "http://www.br-online.de/bayern1/zwoelfuhrlaeuten/12uhr-nammering-av-ID1215768335267.xml";
