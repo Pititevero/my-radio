@@ -296,7 +296,7 @@ function start(){
 var div=_gel("container");
 var radioToStartWith = getRadioToStartWith();
 var dropdownList = getRadioList(radioToStartWith);
-var chaine= "<label style=\"color: white; padding: 2px; \"><b>__MSG_select_station__</b></label>"
+var content= "<label style=\"color: white; padding: 2px; \"><b>__MSG_select_station__</b></label>"
 + "<div><form><select name=\"radiolist\" style=\"width: 13em;\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
 + dropdownList
 + "</select></form></div>"
@@ -305,7 +305,7 @@ var chaine= "<label style=\"color: white; padding: 2px; \"><b>__MSG_select_stati
 + "<div style=\"visibility: hidden;\">"
 + "<iframe src=\"\" name=\"displayRadio\" id=\"displayRadio\" height=\"0\" width=\"0\"></iframe>"
 + "</div>"
-div.innerHTML=chaine;
+div.innerHTML=content;
 
 startRadio(radioToStartWith);
 }
