@@ -2,7 +2,7 @@
 <Module>
 <ModulePrefs title="myRadio"
 author="myRadio team"
-height="100"
+height="150"
 width="400"
 scrolling="false">
 <Locale messages="http://my-radio.googlecode.com/svn/trunk/lang/ALL_ALL.xml" />
@@ -56,8 +56,11 @@ scrolling="false">
 <style>
 #container {
 background-image: url(__UP_skin__);
-text-align: center;
+text-align: left;
 padding: 5px;
+}
+#player {
+text-align: center;
 }
 </style>
 
@@ -296,13 +299,14 @@ function start(){
 var div=_gel("container");
 var radioToStartWith = getRadioToStartWith();
 var dropdownList = getRadioList(radioToStartWith);
-var content= "<label style=\"color: white; padding: 2px; \"><b>__MSG_select_station__</b></label>"
-+ "<div><form><select name=\"radiolist\" style=\"width: 13em;\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
+var content= "<img src=\"http://my-radio.googlecode.com/svn/trunk/logo/logoblack.png\" style = \"width: 70px; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
++ "<div id=player><label style=\"color: white; padding: 2px; \"><b>__MSG_select_station__</b></label>"
++ "<form><select name=\"radiolist\" style=\"width: 13em;\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
 + dropdownList
-+ "</select></form></div>"
++ "</select></form>"
 + "<img src=\"http://my-radio.googlecode.com/svn/trunk/buttons/playbutton.png\" style = \"width: 25px; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
 + "<img src=\"http://my-radio.googlecode.com/svn/trunk/buttons/stopbutton.png\" style = \"width: 25px; padding: 3px;\" onclick=\"stop();\"/>"
-+ "<div style=\"visibility: hidden;\">"
++ "</div><div style=\"visibility: hidden;\">"
 + "<iframe src=\"\" name=\"displayRadio\" id=\"displayRadio\" height=\"0\" width=\"0\"></iframe>"
 + "</div>"
 div.innerHTML=content;
