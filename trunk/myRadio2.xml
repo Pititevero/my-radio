@@ -7,6 +7,7 @@ category="funandgames"
 description="Listen to radio stations from all around the world and share with your friends!"
 height="230"
 width="320"
+screenshot="http://my-radio.googlecode.com/svn/trunk/logo/.png"
 thumbnail="http://my-radio.googlecode.com/svn/trunk/logo/.png"
 scrolling="false">
 <Locale messages="http://my-radio.googlecode.com/svn/trunk/lang/ALL_ALL.xml" />
