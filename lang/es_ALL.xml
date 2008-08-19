@@ -14,5 +14,6 @@
   <msg name="autoplay_on_page_load">Autoplay carga la pagina</msg>
   <msg name="background">Origen</msg>
   <msg name="select_station">Seleccionar una emisora</msg>
+  <msg name="share_with_your_friends">Compartir con tus amigos!</msg>
 </messagebundle>
 
