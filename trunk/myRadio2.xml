@@ -5,7 +5,7 @@ author="myRadio team"
 author_email="myRadio-team@google.com"
 category="funandgames"
 description="Listen to radio stations from all around the world and share with your friends!"
-height="180"
+height="230"
 width="400"
 thumbnail="http://my-radio.googlecode.com/svn/trunk/logo/.png"
 scrolling="false">
@@ -307,7 +307,7 @@ function start(){
 var div=_gel("container");
 var radioToStartWith = getRadioToStartWith();
 var dropdownList = getRadioList(radioToStartWith);
-var content= "<img src=\"http://my-radio.googlecode.com/svn/trunk/logo/logoblack.png\" style = \"width: 30%; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
+var content= "<img src=\"http://my-radio.googlecode.com/svn/trunk/logo/logoblack.png\" style = \"width: 25%; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
 + "<div id=player><label style=\"color: white; padding: 2px; \"><b>__MSG_select_station__</b></label>"
 + "<form><select name=\"radiolist\" style=\"width: 13em;\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
 + dropdownList
