@@ -48,8 +48,8 @@ scrolling="false">
 <EnumValue value="http://my-radio.googlecode.com/svn/trunk/skins/spirals.png" display_value="Spirals"/>
 <EnumValue value="http://my-radio.googlecode.com/svn/trunk/skins/starredsky.png" display_value="Stars"/>
 </UserPref>
-<UserPref name="currentRadio" default_value="evropa2cz" dataType="hidden">
-</UserPref>
+<UserPref name="currentRadio" default_value="evropa2cz" dataType="hidden" />
+<UserPref name="favourites" dataType="hidden" />
 
 <Content type="html">
 <![CDATA[
@@ -74,10 +74,32 @@ var radioES = new Array('cadena100es', 'radiomarcaes');
 var radioNames = new Array(radioCZ, radioFR, radioDE, radioES);
 var selectedRadio = "";
 
-function startRadio(radio) {
-if (playAtLaunch) {
-play(radio);
+function getFavourites() {
+  return prefs.get('favourites').split('|');
 }
+
+function addToFavourites(radioId) {
+  prefs.set('favourites', prefs.get('favourites') + '|' + radioId);
+}
+
+function removeFromFavouries(radioId) {
+  var favs = getFavourites();
+  var newFavs = [];
+
+  for (var i = 0, fav; fav = favs[i]; ++i) {
+    if (fav != radioId) {
+      newFavs.push(fav);
+    }
+  }
+
+  prefs.set('favourites', newFavs);
+}
+  
+
+function startRadio(radio) {
+  if (playAtLaunch) {
+    play(radio);
+  }
 }
 
 function play(radio){
