@@ -14,5 +14,6 @@
   <msg name="autoplay_on_page_load">Spela automatiskt när sidan laddats</msg>
   <msg name="background">Bakgrund</msg>
   <msg name="select_station">Välj station</msg>
+  <msg name="share_with_your_friends">Dela med dina vänner!</msg>
 </messagebundle>
 
