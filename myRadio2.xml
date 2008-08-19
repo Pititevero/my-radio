@@ -307,14 +307,14 @@ function start(){
 var div=_gel("container");
 var radioToStartWith = getRadioToStartWith();
 var dropdownList = getRadioList(radioToStartWith);
-var content= "<img src=\"http://my-radio.googlecode.com/svn/trunk/logo/logoblack.png\" style = \"width: 25%; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
+var content= "<div><img src=\"http://my-radio.googlecode.com/svn/trunk/logo/logoblack.png\" style = \"width: 25%; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
 + "<div id=player><label style=\"color: white; padding: 2px; \"><b>__MSG_select_station__</b></label>"
 + "<form><select name=\"radiolist\" style=\"width: 13em;\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
 + dropdownList
 + "</select></form>"
 + "<img src=\"http://my-radio.googlecode.com/svn/trunk/buttons/playbutton.png\" style = \"width: 25px; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
 + "<img src=\"http://my-radio.googlecode.com/svn/trunk/buttons/stopbutton.png\" style = \"width: 25px; padding: 3px;\" onclick=\"stop();\"/>"
-+ "</div><div id=share><label style=\"color: white; padding: 5px; \"><b>__MSG_share_with_your_friends__</b></label>"
++ "</div></div><div id=share><label style=\"color: white; padding: 5px; \"><b>__MSG_share_with_your_friends__</b></label>"
 + "<a href=\"https://mail.google.com/mail/?tf=1&view=cm&ui=2&fs=1\" target=\"_blank\"><img src=\"http://my-radio.googlecode.com/svn/trunk/logo/logogmail.png\" style=\"height: 20px; padding: 0px;\"/></a>"
 + "<a href=\"http://talkgadget.google.com/talkgadget/popout\" target=\"_blank\"><img src=\"http://my-radio.googlecode.com/svn/trunk/logo/logogtalk.png\" style = \"height: 20px; padding: 0px;\"/></a>"
 + "</div><div style=\"visibility: hidden;\">"
