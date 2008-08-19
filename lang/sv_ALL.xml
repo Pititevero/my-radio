@@ -1,0 +1,18 @@
+<!-- Message bundle for Swedish -->
+
+<messagebundle>
+  <msg name="selected_country">Radiostationer från</msg>
+  <msg name="all">alla länder</msg>
+  <msg name="germany">Tyskland</msg>
+  <msg name="spain">Spanien</msg>
+  <msg name="france">Frankrike</msg>
+  <msg name="czech">Tjeckien</msg>
+  <msg name="open_radio_in_a_new_window">Öppna i ett nytt fönster</msg>
+  <msg name="always_start_with">Börja spela</msg>
+  <msg name="last_station">den senaste stationen</msg>
+  <msg name="random_station">en slumpmässig station</msg>
+  <msg name="autoplay_on_page_load">Spela automatiskt när sidan laddats</msg>
+  <msg name="background">Bakgrund</msg>
+  <msg name="select_station">Välj station</msg>
+</messagebundle>
+
