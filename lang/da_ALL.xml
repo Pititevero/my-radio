@@ -1,0 +1,19 @@
+<!-- Message bundle for ALL_ALL and US english -->
+
+<messagebundle>
+  <msg name="selected_country">Radio stationer fra</msg>
+  <msg name="all">alle lande</msg>
+  <msg name="germany">Tyskland</msg>
+  <msg name="spain">Spanien</msg>
+  <msg name="france">Frankrig</msg>
+  <msg name="czech">Tjekkiet</msg>
+  <msg name="open_radio_in_a_new_window">Åben radio i et nyt vindue</msg>
+  <msg name="always_start_with">Altid begynd med</msg>
+  <msg name="last_station">sidst spillet station</msg>
+  <msg name="random_station">tilfældig station</msg>
+  <msg name="autoplay_on_page_load">Automatisk afspilning</msg>
+  <msg name="background">Baggrund</msg>
+  <msg name="select_station">Vælg station</msg>
+  <msg name="share_with_your_friends">Del med dine venner!</msg>
+</messagebundle>
+
