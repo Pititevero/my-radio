@@ -57,7 +57,7 @@ scrolling="false">
 #container {
 background-image: url(__UP_skin__);
 text-align: center;
-padding: 10px;
+padding: 5px;
 }
 </style>
 
@@ -75,31 +75,31 @@ var radioNames = new Array(radioCZ, radioFR, radioDE, radioES);
 var selectedRadio = "";
 
 function getFavourites() {
-  return prefs.get('favourites').split('|');
+return prefs.get('favourites').split('|');
 }
 
 function addToFavourites(radioId) {
-  prefs.set('favourites', prefs.get('favourites') + '|' + radioId);
+prefs.set('favourites', prefs.get('favourites') + '|' + radioId);
 }
 
 function removeFromFavouries(radioId) {
-  var favs = getFavourites();
-  var newFavs = [];
+var favs = getFavourites();
+var newFavs = [];
 
-  for (var i = 0, fav; fav = favs[i]; ++i) {
-    if (fav != radioId) {
-      newFavs.push(fav);
-    }
-  }
-
-  prefs.set('favourites', newFavs);
+for (var i = 0, fav; fav = favs[i]; ++i) {
+if (fav != radioId) {
+newFavs.push(fav);
 }
-  
+}
+
+prefs.set('favourites', newFavs);
+}
+
 
 function startRadio(radio) {
-  if (playAtLaunch) {
-    play(radio);
-  }
+if (playAtLaunch) {
+play(radio);
+}
 }
 
 function play(radio){
@@ -300,8 +300,8 @@ var chaine= "<label style=\"color: white; padding: 2px; \"><b>__MSG_select_stati
 + "<div><form><select name=\"radiolist\" style=\"width: 13em;\" onchange=\"play(selectedRadio = radiolist.options[radiolist.selectedIndex].value);\">"
 + dropdownList
 + "</select></form></div>"
-+ "<button onclick=\"play(selectedRadio);\">Play</button>"
-+ "<button onclick=\"stop();\">Stop</button>"
++ "<img src=\"http://my-radio.googlecode.com/svn/trunk/buttons/playbutton.png\" style = \"width: 25px; padding: 3px;\" onclick=\"play(selectedRadio);\"/>"
++ "<img src=\"http://my-radio.googlecode.com/svn/trunk/buttons/stopbutton.png\" style = \"width: 25px; padding: 3px;\" onclick=\"stop();\"/>"
 + "<div style=\"visibility: hidden;\">"
 + "<iframe src=\"\" name=\"displayRadio\" id=\"displayRadio\" height=\"0\" width=\"0\"></iframe>"
 + "</div>"
@@ -315,4 +315,5 @@ _IG_RegisterOnloadHandler(start);
 ]]>
 </Content>
 </Module>
+
 
