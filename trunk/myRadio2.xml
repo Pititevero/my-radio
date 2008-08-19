@@ -38,7 +38,6 @@ scrolling="false">
 <EnumValue value="bayern1de" display_value="Bayern 1 (DE)"/>
 <EnumValue value="bayern3de" display_value="Bayern 3 (DE)"/>
 <EnumValue value="einslivede" display_value="Einslive (DE)"/>
-<EnumValue value="energyde" display_value="Energy (DE)"/>
 <EnumValue value="radioseefunkde" display_value="Radio Seefunk (DE)"/>
 <EnumValue value="cadena100es" display_value="Cadena 100 (ES)"/>
 <EnumValue value="radiomarcaes" display_value="Radio Marca (ES)"/>
@@ -80,7 +79,7 @@ var radioAtLaunch = prefs.getString('startWith');
 var selectedCountry = prefs.getString('selectedCountry');
 var radioCZ = new Array('evropa2cz', 'frekvence1cz', 'kiss98fmcz', 'radiocitycz', 'radiodjcz');
 var radioFR = new Array('europe1fr', 'nrjfr', 'rtl2fr', 'skyrockfr', 'virginradiofr');
-var radioDE = new Array('bayern1de', 'bayern2de','einslivede', 'energyde', 'radioseefunkde');
+var radioDE = new Array('bayern1de', 'bayern2de','einslivede', 'radioseefunkde');
 var radioES = new Array('cadena100es', 'radiomarcaes');
 var radioNames = new Array(radioCZ, radioFR, radioDE, radioES);
 var selectedRadio = "";
@@ -156,9 +155,6 @@ break;
 case 'radioseefunkde':
 playerURL = "http://www.radio-seefunk.de/popup/webradio/webradio.htm";
 break;
-case 'energyde':
-playerURL = "http://www.radio-seefunk.de/popup/webradio/webradio.htm";
-break;
 case 'radiomarcaes':
 playerURL = "http://www.marca.com/elementosPortada/popup/radiomarca/";
 break;
@@ -205,7 +201,6 @@ var radioList =
 + "<option value=\"bayern1de\">Bayern 1</option>"
 + "<option value=\"bayern3de\">Bayern 3</option>"
 + "<option value=\"einslivede\">Einslive</option>"
-+ "<option value=\"energyde\">Energy</option>"
 + "<option value=\"radioseefunkde\">Radio Seefunk</option>"
 + "</optgroup>";
 }
@@ -246,7 +241,6 @@ var radioList =
 + "<option value=\"bayern1de\">Bayern 1</option>"
 + "<option value=\"bayern3de\">Bayern 3</option>"
 + "<option value=\"einslivede\">Einslive</option>"
-+ "<option value=\"energyde\">Energy</option>"
 + "<option value=\"radioseefunkde\">Radio Seefunk</option>"
 + "</optgroup>"
 + "<optgroup label=\"__MSG_spain__\">"
