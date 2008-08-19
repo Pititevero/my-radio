@@ -14,5 +14,6 @@
   <msg name="autoplay_on_page_load">Jouer automatiquement au chargement de la page</msg>
   <msg name="background">Arrière-plan</msg>
   <msg name="select_station">Sélectionner une station</msg>
+  <msg name="share_with_your_friends">Fais-en profiter tes amis !</msg>
 </messagebundle>
 
