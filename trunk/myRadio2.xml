@@ -2,8 +2,12 @@
 <Module>
 <ModulePrefs title="myRadio"
 author="myRadio team"
+author_email="myRadio-team@google.com"
+category="funandgames"
+description="Listen to radio stations from all around the world and share with your friends!"
 height="150"
 width="400"
+thumbnail="http://my-radio.googlecode.com/svn/trunk/logo/.png"
 scrolling="false">
 <Locale messages="http://my-radio.googlecode.com/svn/trunk/lang/ALL_ALL.xml" />
 <Locale lang="fr" messages="http://my-radio.googlecode.com/svn/trunk/lang/fr_ALL.xml"/>
