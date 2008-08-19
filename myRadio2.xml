@@ -130,7 +130,6 @@ var playerURL = null;
 //}
 switch(radio) {
 case 'europe1fr':
-
 playerURL = "http://viphttp.yacast.net/V4/europe1/europe1_main_V3.html";
 break;
 case 'nrjfr':
@@ -179,7 +178,7 @@ case 'radiodjcz':
 playerURL = "http://www.radiodj.cz/cs/player.shtml";
 break;
 case 'kiss98fmcz':
-playerURL = "http://www.radiodj.cz/cs/player.shtml";
+playerURL = "http://www.kiss98.cz/radio/vysilani-online/kvalita/16";
 break;
 }
 //to add
