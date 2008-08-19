@@ -14,5 +14,6 @@
   <msg name="autoplay_on_page_load">Autoplay on page load</msg>
   <msg name="background">Background</msg>
   <msg name="select_station">Select a station</msg>
+  <msg name="share_with_your_friends">Share with your friends!</msg>
 </messagebundle>
 
