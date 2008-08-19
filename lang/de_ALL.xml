@@ -1,6 +1,19 @@
 <!-- Message bundle for de_ALL -->
 
 <messagebundle>
-  <msg name="select_station">Wählen Sie eine Station aus</msg>
+  <msg name="selected_country">Radiosender von</msg>
+  <msg name="all">Alle Länder</msg>
+  <msg name="germany">Deutschland</msg>
+  <msg name="spain">Spanien</msg>
+  <msg name="france">Frankreich</msg>
+  <msg name="czech">Tschechien</msg>
+  <msg name="open_radio_in_a_new_window">Öffne den Radiosender in einem neuen Fenster</msg>
+  <msg name="always_start_with">Beginne stets mit</msg>
+  <msg name="last_station">Zuletzt gespielte Station</msg>
+  <msg name="random_station">Irgendeine Station</msg>
+  <msg name="autoplay_on_page_load">Automatische Wiedergabe auf dieser Seite</msg>
+  <msg name="background">Hintergrund</msg>
+  <msg name="select_station">Wähle einen Radiosender</msg>
+</messagebundle>
 </messagebundle>
 
