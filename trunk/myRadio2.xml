@@ -16,6 +16,7 @@ scrolling="false">
 <Locale lang="de" messages="http://my-radio.googlecode.com/svn/trunk/lang/de_ALL.xml"/>
 <Locale lang="es" messages="http://my-radio.googlecode.com/svn/trunk/lang/es_ALL.xml"/>
 <Locale lang="fr" messages="http://my-radio.googlecode.com/svn/trunk/lang/fr_ALL.xml"/>
+<Locale lang="sk" messages="http://my-radio.googlecode.com/svn/trunk/lang/sk_ALL.xml"/>
 <Locale lang="sv" messages="http://my-radio.googlecode.com/svn/trunk/lang/sv_ALL.xml"/>
 <Require feature="settitle" />
 <Require feature='setprefs'/>
