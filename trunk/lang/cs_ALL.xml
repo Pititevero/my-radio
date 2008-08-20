@@ -1,0 +1,19 @@
+<!-- Message bundle for Czech -->
+
+<messagebundle>
+  <msg name="selected_country">Rádiá z</msg>
+  <msg name="all">Všechny krajiny</msg>
+  <msg name="germany">Nemecko</msg>
+  <msg name="spain">Španelsko</msg>
+  <msg name="france">Francie</msg>
+  <msg name="czech">Ceská republika</msg>
+  <msg name="open_radio_in_a_new_window">Otevrít rádio v novém okne</msg>
+  <msg name="always_start_with">Vždy navrchu</msg>
+  <msg name="last_station">Poslední prehrávané rádio</msg>
+  <msg name="random_station">Náhodné rádio</msg>
+  <msg name="autoplay_on_page_load">Spustit pri nactení stránky</msg>
+  <msg name="background">Pozadí</msg>
+  <msg name="select_station">Vyber rádio</msg>
+  <msg name="share_with_your_friends">Sdílet se svými práteli</msg>
+</messagebundle>
+

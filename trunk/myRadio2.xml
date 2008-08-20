@@ -11,6 +11,7 @@ screenshot="http://my-radio.googlecode.com/svn/trunk/logo/.png"
 thumbnail="http://my-radio.googlecode.com/svn/trunk/logo/.png"
 scrolling="false">
 <Locale messages="http://my-radio.googlecode.com/svn/trunk/lang/ALL_ALL.xml" />
+<Locale lang="cs" messages="http://my-radio.googlecode.com/svn/trunk/lang/cs_ALL.xml"/>
 <Locale lang="da" messages="http://my-radio.googlecode.com/svn/trunk/lang/da_ALL.xml"/>
 <Locale lang="de" messages="http://my-radio.googlecode.com/svn/trunk/lang/de_ALL.xml"/>
 <Locale lang="es" messages="http://my-radio.googlecode.com/svn/trunk/lang/es_ALL.xml"/>
